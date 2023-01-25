@@ -1,7 +1,7 @@
 <footer class="footer">
 			<div class="footer__top top-footer __container">
 				<a href="#" class="top-footer__logo -ibg">
-					<img src="img/header/Logo.svg" alt="">
+					<img src="<?php bloginfo( 'template_url' ); ?>/assets/img/header/Logo.svg" alt="">
 				</a>
 				<div class="top-footer__fb">
 					<span>Присоединяйтесь:</span>
@@ -37,7 +37,7 @@
 					</div>
 				</div>
 				<div class="midle-footer__wave">
-					<picture><source srcset="img/footer/elements.webp" type="image/webp"><img src="img/footer/elements.png" alt=""></picture>
+					<picture><source srcset="<?php bloginfo( 'template_url' ); ?>/assets/img/footer/elements.webp" type="image/webp"><img src="<?php bloginfo( 'template_url' ); ?>/assets/img/footer/elements.png" alt=""></picture>
 				</div>
 			</div>
 			<div class="footer__bottom bottom-footer">

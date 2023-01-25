@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html <?php language_attributes(); ?>>
 
 <head>
 	<title>Главная</title>
-	<meta charset="UTF-8">
+	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
 	<!-- <link rel="stylesheet" href="css/style.min.css?_v=20230118121641"> -->
@@ -11,11 +11,7 @@
 	</script>
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<?php
-
-	wp_head();
-
-	?>
+	<?php	wp_head(); ?>
 </head>
 
 <body>
@@ -25,7 +21,7 @@
 			<div class="header__body">
 				<div class="header__container">
 					<div class="header__logo -ibg">
-						<img src="img/header/Logo.svg" alt="logo">
+						<img src="<?php bloginfo('template_url'); ?>/assets/img/header/Logo.svg" alt="logo">
 					</div>
 					<a data-da=".body-top__chord-adaptiv, 767.98,0" href="#" class="header__adress">
 						<div class="header__mesto">Локация</div>
