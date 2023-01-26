@@ -687,7 +687,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
 }
-
+.body-top__fb-wrapper picture {height: 14px;}
 .body-top__fb-wrapper::before,
 .body-top__fb-wrapper::after {
   content: "";

@@ -9,7 +9,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	
 	//wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', true );
 
-  wp_enqueue_style( 'maincss', get_template_directory_uri() . '/assets/css/style.min.css' );
+  wp_enqueue_style( 'maincss', get_template_directory_uri() . '/assets/css/style.css' );
 
 	
 	}

@@ -33,32 +33,7 @@ Template Name: home
 											<div class="body-top__subtitle"><?php the_content(); ?></div>
 										</div>
 									</div>
-
 									<?php }} wp_reset_postdata(); ?>
-
-							
-							
-							<!-- <div class="body-top__slide -ibg">
-								<picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/main01.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/main01.jpg" alt=""></picture>
-								<div class="body-top__text">
-									<h2 class="body-top__title">4ВЫСОКОСКОРОСТНАЯ ПОРТАЛЬНАЯ <span><br></span> МОЙКА АВТОМАТ</h2>
-									<div class="body-top__subtitle">Производства Германии</div>
-								</div>
-							</div>
-							<div class="body-top__slide -ibg">
-								<picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/main02.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/main02.jpg" alt=""></picture>
-								<div class="body-top__text">
-									<h2 class="body-top__title">5ВЫСОКОСКОРОСТНАЯ ПОРТАЛЬНАЯ <span><br></span> МОЙКА АВТОМАТ</h2>
-									<div class="body-top__subtitle">Производства Германии</div>
-								</div>
-							</div>
-							<div class="body-top__slide -ibg">
-								<picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/main03.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/main03.jpg" alt=""></picture>
-								<div class="body-top__text">
-									<h2 class="body-top__title">6ВЫСОКОСКОРОСТНАЯ ПОРТАЛЬНАЯ <span><br></span> МОЙКА АВТОМАТ</h2>
-									<div class="body-top__subtitle">Производства Германии</div>
-								</div>
-							</div> -->
 						</div>
 					</div>
 					<div data-da=".header__container, 767.98,1" class="body-top__fb">
@@ -74,8 +49,24 @@ Template Name: home
 					<div class="body-bottom__cont">
 						<div class="body-bottom__slider">
 							<div class="body-bottom__swiper">
+
+							<?php
+							global $post;
+
+							$myposts = get_posts([ 
+								'numberposts' => -1,
+							]);
+
+							if( $myposts ){
+								foreach( $myposts as $post ){
+									setup_postdata( $post );
+									?>
 								<div class="body-bottom__slide -ibg">
-									<picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/main_01t.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/main_01t.png" alt=""></picture>
+									<?php the_post_thumbnail(); ?>
+									<!-- <picture><source srcset="<?php bloginfo('template_url'); 
+									?>/assets/img/main/main_01t.webp" type="image/webp">
+									<img src="<?php bloginfo('template_url');
+									 ?>/assets/img/main/main_01t.png" alt=""></picture> -->
 									<button type="submit" class="body-bottom__detail">
 										<span>Подробнее</span>
 										<div class="body-bottom__detail-img">
@@ -83,12 +74,13 @@ Template Name: home
 										</div>
 									</button>
 								</div>
-								<div class="body-bottom__slide -ibg">
+								<?php }} wp_reset_postdata(); ?>
+								<!-- <div class="body-bottom__slide -ibg">
 									<picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/main_02t.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/main_02t.png" alt=""></picture>
 								</div>
 								<div class="body-bottom__slide -ibg">
 									<picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/main_03t.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/main_03t.png" alt=""></picture>
-								</div>
+								</div> -->
 								<!-- <div class="body-bottom__slide -ibg">
 									<picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/main_01t.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/main_01t.png" alt=""></picture>
 									<button type="submit" class="body-bottom__detail">
