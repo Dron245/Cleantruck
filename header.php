@@ -21,7 +21,8 @@
 			<div class="header__body">
 				<div class="header__container">
 					<div class="header__logo -ibg">
-						<img src="<?php bloginfo('template_url'); ?>/assets/img/header/Logo.svg" alt="logo">
+					<?php the_custom_logo(); ?>
+						<!-- <img src="<?php bloginfo('template_url'); ?>/assets/img/header/Logo.svg" alt="logo"> -->
 					</div>
 					<a data-da=".body-top__chord-adaptiv, 767.98,0" href="#" class="header__adress">
 						<div class="header__mesto">Локация</div>

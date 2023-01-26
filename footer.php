@@ -1,8 +1,9 @@
 <footer class="footer">
 			<div class="footer__top top-footer __container">
-				<a href="#" class="top-footer__logo -ibg">
-					<img src="<?php bloginfo( 'template_url' ); ?>/assets/img/header/Logo.svg" alt="">
-				</a>
+				<div class="top-footer__logo -ibg">
+					<!-- <img src="<?php bloginfo( 'template_url' ); ?>/assets/img/header/Logo.svg" alt=""> -->
+					<?php the_custom_logo(); ?>
+				</div>
 				<div class="top-footer__fb">
 					<span>Присоединяйтесь:</span>
 					<a href="#">
