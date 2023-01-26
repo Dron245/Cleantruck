@@ -66,7 +66,9 @@ Template Name: home
 							<picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/fb.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/fb.png" alt=""></picture>
 						</a>
 					</div>
-					<div class="body-top__dotts"></div>
+					<div class="body-top__dotts-line">
+						<div class="body-top__dotts"></div>
+					</div>
 				</div>
 				<div data-da=".page__about,767.98,0" class="main__body-bottom body-bottom">
 					<div class="body-bottom__cont">

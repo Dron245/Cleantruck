@@ -3925,6 +3925,7 @@
                 spaceBetween: 0,
                 speed: 1e3,
                 autoplay: true,
+                loop: true,
                 effect: "fade",
                 autoplay: {
                     delay: 3e3,
