@@ -28,9 +28,9 @@
 						<div class="header__mesto">Локация</div>
 						<div class="header__subtitle header__subtitle_city-street ">г. Домодедово, ул. Логистическая д. 1</div>
 					</a>
-					<a data-da=".body-top__chord-adaptiv, 767.98,0" href="tel:+79268048183" class="header__phone-link">
+					<a data-da=".body-top__chord-adaptiv, 767.98,0" href="tel:<?php the_field('phone-number')?>" class="header__phone-link">
 						<div class="header__phone">Телефон</div>
-						<div class="header__subtitle header__subtitle_phone">+7 926 804 81 83</div>
+						<div class="header__subtitle header__subtitle_phone"><?php the_field('phone')?></div>
 					</a>
 					<div class="header__button">
 						<button type="button" class="menu__icon icon-menu"><span></span></button>

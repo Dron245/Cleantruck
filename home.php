@@ -111,9 +111,9 @@ Template Name: home
 			</section>
 			<section class="page__about about">
 				<div class="about__container">
-					<p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor. Placerat vestibulum lectus mauris ultrices eros in cursus turpis massa.</p>
+					<p class="about__text"><?php the_field('about-text')?></p>
 					<div class="about__bottom">
-						<div class="about__subtext">Lorem ipsum dolor sit amet</div>
+						<div class="about__subtext"><?php the_field('about-subtext')?></div>
 						<h3 class="about__title">О нас</h3>
 						<div class="about__circles">
 							<div class="about__circle"></div>
@@ -169,7 +169,7 @@ Template Name: home
 					<div class="plan__grid autotype">
 						<a href="#" class="autotype__item">
 							<div class="autotype__img -ibg">
-								<picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/plan01.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/plan01.png" alt=""></picture>
+								<img src="<?php the_field('autotype__img')?>" alt="">
 							</div>
 							<div class="autotype__title">Автобусы</div>
 						</a>

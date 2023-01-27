@@ -25,9 +25,9 @@
 						<div class="midle-footer__title">Контакты</div>
 						<div class="midle-footer__grid">
 							<div class="midle-footer__text midle-footer__text_gp">Позвоните:</div>
-							<a class="midle-footer__text" href="tel:+79268049183">+7 (926) 804 81 83</a>
+							<a class="midle-footer__text" href="tel:<?php the_field('phone-number')?>"><?php the_field('phone')?></a>
 							<div class="midle-footer__text midle-footer__text_gp">Напишите:</div>
-							<a class="midle-footer__text" href="mailto:mail@mail.com">mail@mail.com</a>
+							<a class="midle-footer__text" href="<?php the_field('mail')?>"><?php the_field('mail')?></a>
 							<div class="midle-footer__text midle-footer__text_gp">Приезжайте:</div>
 							<a class="midle-footer__text midle-footer__text_link" href="#m">г. Домодедово, ул. Логистическая д. 1</a>
 						</div>
