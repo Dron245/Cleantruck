@@ -50,22 +50,13 @@
 			</div>
 		</footer>
 	</div>
-	<!-- <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрыть</button>
-			<div class="popup__text">
-				Text
-			</div>
-		</div>
-	</div>
-</div> -->
+	
 	<?php
 
 	wp_footer();
 
 	?>
-	<!-- <script src="js/app.min.js?_v=20230118121641"></script> -->
+	
 </body>
 
 </html>

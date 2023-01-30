@@ -10,30 +10,23 @@ Template Name: home
 					<div class="body-top__chord-adaptiv"></div>
 					<div class="body-top__slider">
 						<div class="body-top__swiper">
-
-						<?php
-							global $post;
-
-							$myposts = get_posts([ 
-								'numberposts' => -1,
-								
-							]);
-
-							if( $myposts ){
-								foreach( $myposts as $post ){
-									setup_postdata( $post );
-									?>
-									<div class="body-top__slide -ibg">
-										<!-- <picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/main01.webp" 
-										type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/main01.jpg" 
-										alt=""></picture> -->
-										<?php the_post_thumbnail(); ?>
-										<div class="body-top__text">
-											<h2 class="body-top__title"><?php the_title(); ?> <!--<span><br></span>--></h2>
-											<div class="body-top__subtitle"><?php the_content(); ?></div>
-										</div>
-									</div>
-									<?php }} wp_reset_postdata(); ?>
+							<?php
+								$loop = CFS()->get('slider_1');
+								foreach($loop as $row) {
+							?>
+							<div class="body-top__slide -ibg">
+								<picture><source srcset="<?= $row['slide_img'] ?>" 
+									type="image/webp"><img src="<?= $row['slide_img'] ?>" 
+									alt="">
+								</picture>
+								<div class="body-top__text">
+									<h2 class="body-top__title"><?= $row['slide_title']  ?> <!--<span><br></span>--></h2>
+									<div class="body-top__subtitle"><?= $row['slide_subtitle'] ?></div>
+								</div>
+							</div>
+									<?php
+								}
+							?>
 						</div>
 					</div>
 					<div data-da=".header__container, 767.98,1" class="body-top__fb">
@@ -49,32 +42,38 @@ Template Name: home
 					<div class="body-bottom__cont">
 						<div class="body-bottom__slider">
 							<div class="body-bottom__swiper">
-
 							<?php
-							global $post;
-
-							$myposts = get_posts([ 
-								'numberposts' => -1,
-							]);
-
-							if( $myposts ){
-								foreach( $myposts as $post ){
-									setup_postdata( $post );
-									?>
+								$loop = CFS()->get('slider_2');
+								foreach($loop as $row) {
+							?>
 								<div class="body-bottom__slide -ibg">
-									<?php the_post_thumbnail(); ?>
-									<!-- <picture><source srcset="<?php bloginfo('template_url'); 
-									?>/assets/img/main/main_01t.webp" type="image/webp">
-									<img src="<?php bloginfo('template_url');
-									 ?>/assets/img/main/main_01t.png" alt=""></picture> -->
+									<picture><source srcset="<?= $row['slide_img'] ?>">
+										<img src="<?= $row['slide_img'] ?>"> 
+									</picture>
+									
 									<button type="submit" class="body-bottom__detail">
-										<span>Подробнее</span>
+										<?php
+											if(!empty($row['slide_text'])){
+												?>
+													<span><?= $row['slide_text'] ?></span>
+												<?php
+											}
+										?>
 										<div class="body-bottom__detail-img">
-											<img src="<?php bloginfo('template_url'); ?>/assets/img/main/arrow.svg" alt="">
+										<?php
+											if(!empty($row['slide_imgarrow'])){
+												?>
+													<img src="<?= $row['slide_imgarrow'] ?>" alt="">
+												<?php
+											}
+										?>
 										</div>
 									</button>
 								</div>
-								<?php }} wp_reset_postdata(); ?>
+								<?php
+								}
+							?>
+								
 								<!-- <div class="body-bottom__slide -ibg">
 									<picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/main_02t.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/main_02t.png" alt=""></picture>
 								</div>
@@ -167,30 +166,23 @@ Template Name: home
 					</div>
 					<p class="plan__text about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem mollis aliquam ut porttitor leo a diam sollicitudin tempor. Placerat vestibulum lectus mauris ultrices eros in cursus turpis massa.</p>
 					<div class="plan__grid autotype">
-						<a href="#" class="autotype__item">
-							<div class="autotype__img -ibg">
-								<img src="<?php the_field('autotype__img')?>" alt="">
-							</div>
-							<div class="autotype__title">Автобусы</div>
-						</a>
-						<a href="#" class="autotype__item">
-							<div class="autotype__img -ibg">
-								<picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/plan02.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/plan02.png" alt=""></picture>
-							</div>
-							<div class="autotype__title">Спецтехника</div>
-						</a>
-						<a href="#" class="autotype__item">
-							<div class="autotype__img -ibg">
-								<picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/plan03.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/plan03.png" alt=""></picture>
-							</div>
-							<div class="autotype__title">Грузовики</div>
-						</a>
-						<a href="#" class="autotype__item">
-							<div class="autotype__img -ibg">
-								<picture><source srcset="<?php bloginfo('template_url'); ?>/assets/img/main/plan04.webp" type="image/webp"><img src="<?php bloginfo('template_url'); ?>/assets/img/main/plan04.png" alt=""></picture>
-							</div>
-							<div class="autotype__title">Тягочи</div>
-						</a>
+							<?php
+								$loop = CFS()->get('autotype_item');
+								foreach($loop as $row) {
+							?>
+							<a href="#" class="autotype__item">
+								<div class="autotype__img -ibg">
+									<picture><source srcset="
+									<?= $row['autotype_img'] ?>">
+									<img src="
+									<?= $row['autotype_img'] ?>" alt="">
+									</picture>
+								</div>
+								<div class="autotype__title"><?= $row['autotype_title']?></div>
+							</a>
+							<?php
+								}
+							?>
 					</div>
 					<div class="plan__grid detail">
 						<div class="detail__item">

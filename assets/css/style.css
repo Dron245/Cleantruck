@@ -308,11 +308,7 @@ h6 {
 }
 
 .no-webp .footer{
-  background: url("../img/footer/Rectangle 725.jpg") 0 0 no-repeat; }
-
-.footer {
-  background-size: cover;
-}
+  background: url("../img/footer/Rectangle 725.jpg") 0 0/cover no-repeat; }
 
 .footer__top {
   display: -webkit-box;
@@ -687,7 +683,7 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
 }
-.body-top__fb-wrapper picture {height: 14px;}
+
 .body-top__fb-wrapper::before,
 .body-top__fb-wrapper::after {
   content: "";
@@ -1000,10 +996,9 @@ h6 {
 }
 
 .no-webp .page__about{
-  background: url("../img/main/bg-abaut.jpg") 0 0 no-repeat; }
+  background: url("../img/main/bg-abaut.jpg") 0 0/cover no-repeat; }
 
 .page__about {
-  background-size: cover;
   margin-top: -160px;
 }
 
@@ -1158,10 +1153,9 @@ h6 {
 }
 
 .no-webp .items-about__link:hover{
-  background: url("../img/main/bg-abitem.png") 0 0 no-repeat; }
+  background: url("../img/main/bg-abitem.png") 0 0/cover no-repeat; }
 
 .items-about__link:hover {
-  background-size: cover;
   opacity: 0.8;
 }
 
@@ -1310,7 +1304,7 @@ h6 {
 }
 
 .no-webp .detail__item::before{
-  background: url("../img/main/detail-bg.png") 0 0 no-repeat; }
+  background: url("../img/main/detail-bg.png") 0 0/cover no-repeat; }
 
 .detail__item::before {
   content: "";
@@ -1320,7 +1314,6 @@ h6 {
   left: 0;
   top: 0;
   border-radius: 10px;
-  background-size: cover;
   z-index: -1;
   -webkit-filter: opacity(0.12);
           filter: opacity(0.12);
@@ -1416,11 +1409,7 @@ h6 {
 /*=========MINABOUT=========*/
 
 .no-webp .page__minabout{
-  background: url("../img/main/minabout-bg.png") 0 0 no-repeat; }
-
-.page__minabout {
-  background-size: cover;
-}
+  background: url("../img/main/minabout-bg.png") 0 0/cover no-repeat; }
 
 @supports (padding-top: clamp( 2.875rem , 2.5375rem  +  1.6875vw , 4.5625rem )) {
   .minabout__container {
@@ -2300,13 +2289,13 @@ h6 {
   }
 }
 
-.webp .footer{ background: url("../img/footer/Rectangle 725.jpg") 0 0 no-repeat; }
+.webp .footer{ background: url("../img/footer/Rectangle 725.jpg") 0 0/cover no-repeat; }
 
-.webp .page__about{ background: url(../img/main/bg-abaut.webp) 0 0 no-repeat; }
+.webp .page__about{ background: url(../img/main/bg-abaut.webp) 0 0/cover no-repeat; }
 
-.webp .items-about__link:hover{ background: url(../img/main/bg-abitem.webp) 0 0 no-repeat; }
+.webp .items-about__link:hover{ background: url(../img/main/bg-abitem.webp) 0 0/cover no-repeat; }
 
-.webp .detail__item::before{ background: url(../img/main/detail-bg.webp) 0 0 no-repeat; }
+.webp .detail__item::before{ background: url(../img/main/detail-bg.webp) 0 0/cover no-repeat; }
 
 .webp .detail__servis{ background: url(../img/main/x.webp) 1% 60% no-repeat; }
 
@@ -2314,4 +2303,4 @@ h6 {
 
 .webp .detail__time::before{ background: url(../img/main/strelki.webp) 50% 50% no-repeat; }
 
-.webp .page__minabout{ background: url(../img/main/minabout-bg.webp) 0 0 no-repeat; }
+.webp .page__minabout{ background: url(../img/main/minabout-bg.webp) 0 0/cover no-repeat; }
